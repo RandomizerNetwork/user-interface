@@ -1,0 +1,51 @@
+{
+  "name": "randomizer-network",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "devNode": "nodemon server.js",
+    "dev": "HTTPS=true SSL_CRT_FILE=./.cert/new/cert.pem SSL_KEY_FILE=./.cert/new/key.pem next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "startNative": "HTTPS=true react-scripts start",
+    "start-staging": "REACT_APP_API_URL=wss://staging.api.blocknative.com/v0 REACT_APP_STAGING=true HTTPS=true react-scripts start",
+    "start-staging-dev": "REACT_APP_API_URL=wss://staging.api.blocknative.com/v0 REACT_APP_STAGING=true HTTPS=true NODE_ENV='development' nodemon server.js",
+    "start-local": "REACT_APP_API_URL=ws://localhost:3000/v0 REACT_APP_STAGING=true HTTPS=true NODE_ENV='development' nodemon server.js",
+    "buildNative": "react-scripts build react-scripts build",
+    "build-staging": "REACT_APP_API_URL=wss://staging.api.blocknative.com/v0 REACT_APP_STAGING=true react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@web3-onboard/coinbase": "^2.0.2",
+    "@web3-onboard/fortmatic": "^2.0.2",
+    "@web3-onboard/gnosis": "^2.0.1",
+    "@web3-onboard/injected-wallets": "^2.0.6",
+    "@web3-onboard/keepkey": "^2.0.3",
+    "@web3-onboard/keystone": "^2.0.3",
+    "@web3-onboard/ledger": "^2.0.4",
+    "@web3-onboard/magic": "^2.0.3",
+    "@web3-onboard/portis": "^2.0.0",
+    "@web3-onboard/react": "^2.1.6",
+    "@web3-onboard/torus": "^2.0.1",
+    "@web3-onboard/trezor": "^2.0.5",
+    "@web3-onboard/walletconnect": "^2.0.1",
+    "bnc-notify": "^1.9.4",
+    "ethers": "^5.5.2",
+    "ethers-multicall": "^0.2.1",
+    "moment": "^2.29.1",
+    "next": "12",
+    "nextjs-cors": "^2.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-toastify": "^8.1.0",
+    "recompose": "^0.30.0",
+    "uuid": "^8.3.2",
+    "vconsole": "^3.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "truffle-assertions": "^0.9.2"
+  }
+}
