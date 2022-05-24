@@ -15,9 +15,9 @@ export default class Document extends NextDocument {
           <style>{`body { background-color: #1d0733; position: relative !important; }`}</style>
           <style>{`aside.bn-onboard-custom.bn-onboard-modal { z-index: 999999 }`}</style>
           <style>{`div.svelte-rntogh:hover { background: transparent !important }`}</style>
-          <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+          {/* <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
           <script src="assets/js/isotope.pkgd.min.js"></script>
-          <script src="assets/js/main.js"></script>
+          <script src="assets/js/main.js"></script> */}
           <style>{`@media (max-width: 634px) {section.bn-onboard-custom.bn-onboard-modal-content.svelte-rntogh {overflow: auto; position: fixed; top:0} }`}</style>
           {/* 
           <style>{`section.bn-onboard-custom.bn-onboard-modal-content { background: #250a40}`}</style>

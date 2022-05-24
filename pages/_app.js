@@ -21,7 +21,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 import '../public/assets/css/bootstrap.min.css'
 import '../public/assets/css/animate.css'
-import '../public/assets/css/icofont.min.css'
+// import '../public/assets/css/icofont.min.css'
 import '../public/assets/css/font-awesome.min.css'
 import '../public/assets/css/swiper.min.css'
 import '../public/assets/css/lightcase.css'
@@ -286,7 +286,7 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <meta charSet="utf-8"/>
           <title>Randomizer Network Metaverse - Multi-chain Random Entropy Generator</title>
-          <meta name="description" content="Randomizer Metaverse Network is a No-Code Trustless Random Entropy Generator that players, creators and influencers will become imersed in the Random Realm" />
+          <meta name="description" content="Randomizer Metaverse Network is a No-Code Trustless Random Entropy Generator that players, creators and influencers will use to create their own DAO Distributions." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" type="image/png" href="assets/images/favicon.png" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>

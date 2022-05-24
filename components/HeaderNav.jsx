@@ -30,7 +30,7 @@ export default function HeaderNav() {
     connect
   } = useWalletStore();
 
-  // console.log('wallet', wallet)
+  console.log('wallet', wallet)
   // console.log('bnbWallet', bnbWallet)
   const cleanAddress = address !== null && address !== undefined ? address.substr(0, 6) + "..." + address.substr(-4) : ""
 
@@ -61,9 +61,9 @@ export default function HeaderNav() {
                     <ul className={`menu ${menuActive ? 'active' : ''}`}>
 
                       <li className="d-flex align-items-center">
-                        <a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "github"]} /> </a>
-                        <a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "twitter"]} /> </a>
-                        <a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "discord"]} /> </a>
+                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "github"]} /> </a>
+                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "twitter"]} /> </a>
+                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "discord"]} /> </a>
                       </li>
 
                       <li>
@@ -103,18 +103,21 @@ export default function HeaderNav() {
                               <div>
                                 {address !== null && address !== undefined && (
                                   <>
-                                    <div className="row g-0" style={{ borderRadius: "25px", paddingRight: "10px", border: "2px solid #263C90" }}>
+                                    <div className="row g-0" style={{ borderRadius: "25px", paddingRight: "10px", border: "2px solid #FFF" }}>
                                       <div className="col-3" style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingLeft: "15px" }}>
                                         <GetWalletIcon wallet={wallet} />
                                       </div>
                                       <div className="col-9" style={{ margin: "5px 0", paddingLeft: "7px" }}>
                                         <div className="text-center">
-                                          <span style={{ color: "#263C91", marginTop: "7px", fontSize: "1em" }}>
+                                          <span style={{ color: "#FFF", marginTop: "7px", fontSize: "1em" }}>
                                             {network && <span>{getNetworkName(network)} </span>}
                                           </span>
                                         </div>
                                         <div className="text-center">
-                                          <span style={{ color: "#263C91", fontSize: "1rem" }}>{cleanAddress}</span>
+                                          {/* {wallet && wallet.accounts[0]?.ens && (
+                                            <span style={{ color: "#263C91", fontSize: "1rem" }}>{cleanAddress}</span>
+                                          )} */}
+                                          <span style={{ color: "#FFF", fontSize: "1rem" }}>{cleanAddress}</span>
                                         </div>
                                       </div>
                                     </div>

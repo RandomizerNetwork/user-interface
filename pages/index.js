@@ -2,6 +2,7 @@ import Head from 'next/head'
 // import Image from 'next/image'
 // import { pure } from 'recompose';
 
+import MetaPassSection from '../components/MetaPassSection'
 import LaunchpadSection from '../components/LaunchpadSection'
 import SwitchWalletModal from '../components/SwitchWalletModal'
 import Footer from '../components/Footer'
@@ -25,6 +26,7 @@ export default function Home() {
         <meta name="description" content="Randomizer Network is a Decentranlized Randomization Protocol that enables Programable Distributions with Randomness Emissions and Staking for DAO Tokens and NFT Campaigns backed by Chainlinks Verificables Function and Keepers on top of all EVM Chains!" />
       </Head>
       <div>
+        <MetaPassSection />
         <LaunchpadSection />
         <SwitchWalletModal readyToTransact={readyToTransact} address={address} />
         <div className="stars">
@@ -40,7 +42,7 @@ export default function Home() {
 
         {/* <!-- ===========match schedule Section start Here========== --> */}
         {/* <!-- <section className="match-section padding-top padding-bottom" style="background-image:url(assets/images/match/bg.jpg)"> --> */}
-        <section id="launchpadido" className="match-section padding-bottom mt-5" style={{ background: "#074F9A", "borderTopLeftRadius": "10px", "borderTopRightRadius": "10px", "padding": "30px" }}>
+        <section id="launchpadido" className="match-section padding-bottom mt-5" style={{ background: "#00081f", "borderTopLeftRadius": "10px", "borderTopRightRadius": "10px", "padding": "30px" }}>
           {/* <!-- <section className="match-section padding-top padding-bottom"> --> */}
           <div className="container">
             {/* <div className="section-header">
@@ -151,25 +153,25 @@ export default function Home() {
         {/* NEW EXPLANATION SECTION */}
         <section className="newSection">
           <div className="newWrapper">
-            <div className="newMainSection mt-5">Randomizer Network</div>
-            <div className="newMainSectionText">The multi-chain deflationary Launchpad for the Metaverse.</div>
+            <div className="newMainSection mt-5 fs-1 fw-bold">Randomizer Network</div>
+            <div className="newMainSectionText">The multi-chain trustless deflationary Metaverse Launchpad</div>
             <div className="newMainSectionRow">
               <div className="newMainSectionThreeColumn text-center">
-                <h4 style={{ color: "#FFDD00" }}>SMALL MARKET CAP</h4>
+                <h4 style={{ color: "#FFF" }}>SMALL MARKET CAP</h4>
                 <ul>
-                  <li>Randomizer.network will launch on Sushiswap on the Polygon Network with a very small initial market cap of only $150K!</li>
+                  <li>Randomizer.network will launch on Sushiswap on the Polygon Network with a very small initial market cap of only $150,000!</li>
                 </ul>
               </div>
               <div className="newMainSectionThreeColumn text-center">
-                <h4 style={{ color: "#FFDD00" }}>How to participate</h4>
+                <h4 style={{ color: "#FFF" }}>How to participate</h4>
                 <ul>
-                  <li>The IDO will be launched using PinkSale.Finance and you can begin staking right after the initial liquidity launch on PancakeSwap.</li>
+                  <li>The Meta Game Passes enables automatic participation in the Daily No Loss Lottery Raffle where you can win RN Governance Tokens and RNLL Utility Tokens.</li>
                 </ul>
               </div>
               <div className="newMainSectionThreeColumn text-center">
-                <h4 style={{ color: "#FFDD00" }}>Free Early unstaking:</h4>
+                <h4 style={{ color: "#FFF" }}>Free Early unstaking</h4>
                 <ul>
-                  <li>There will be an option to unstake early that forfeits all accumulated staking rewards. If stakers wait until locking fully matures, they will receive full rewards and IGO allocations.</li>
+                  <li>There will be an option to unstake early but will forfeits all accumulated staking rewards. If stakers wait until locking fully matures, they will receive full rewards.</li>
                 </ul>
               </div>
             </div>
@@ -203,48 +205,83 @@ export default function Home() {
               <div className="newMainSectionThreeColumn text-center">
                 <div className='section3 d-block'>
                   <div className='section2Column w-100'>
-                    <div className="title">Team</div>
-                    <div className="desc">10%</div>
+                    <div className="title">No Loss Lottery Rewards</div>
+                    <div className="desc">11%</div>
                   </div>
                   <div className='section2Column w-100'>
-                    <div className="title">Ecosystem</div>
-                    <div className="desc">5%</div>
-                  </div>
-                  <div className='section2Column w-100'>
-                    <div className="title">Advisors</div>
-                    <div className="desc">1%</div>
+                    <div className="title">No Loss Lottery Burn</div>
+                    <div className="desc">11%</div>
                   </div>
                 </div>
               </div>
               <div className="newMainSectionThreeColumn text-center">
                 <div className='section3 d-block'>
-                  <div className='section2Column w-100'>
-                    <div className="title">Liquidity</div>
-                    <div className="desc">60%</div>
+                <div className='section2Column w-100'>
+                    <div className="title">DAO Treasury</div>
+                    <div className="desc">50%</div>
                   </div>
                   <div className='section2Column w-100'>
+                    <div className="title">Team</div>
+                    <div className="desc">8%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="newMainSectionThreeColumn text-center">
+                <div className='section3 d-block'>
+                <div className='section2Column w-100'>
                     <div className="title">Staking</div>
                     <div className="desc">10%</div>
                   </div>
                   <div className='section2Column w-100'>
-                    <div className="title">Reserve</div>
-                    <div className="desc">5%</div>
+                    <div className="title">Yield Farming</div>
+                    <div className="desc">10%</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        {/* Randomizer Network TOKENOMICS */}
+
+        {/* Randomizer Network EMISSIONS */}
+        <section className="newSection">
+          <div className="newWrapper">
+            <div className="newMainSection mt-5">EMISSIONS</div>
+            <div className="newMainSectionRow">
+              <div className="newMainSectionThreeColumn text-center">
+                <div className='section3 d-block'>
+                  <div className='section2Column w-100'>
+                    <div className="title">No Loss Lottery Rewards</div>
+                    <div className="desc">10 Years</div>
+                  </div>
+                  <div className='section2Column w-100'>
+                    <div className="title">No Loss Lottery Burn</div>
+                    <div className="desc">10 Years</div>
                   </div>
                 </div>
               </div>
               <div className="newMainSectionThreeColumn text-center">
                 <div className='section3 d-block'>
-                  <div className='section2Column w-100'>
-                    <div className="title">Private sale</div>
-                    <div className="desc">4%</div>
+                <div className='section2Column w-100'>
+                    <div className="title">DAO Treasury</div>
+                    <div className="desc">5 Years</div>
                   </div>
                   <div className='section2Column w-100'>
-                    <div className="title">Public Sale</div>
-                    <div className="desc">4%</div>
+                    <div className="title">Team</div>
+                    <div className="desc">5 Years</div>
+                  </div>
+                </div>
+              </div>
+              <div className="newMainSectionThreeColumn text-center">
+                <div className='section3 d-block'>
+                <div className='section2Column w-100'>
+                    <div className="title">Staking</div>
+                    <div className="desc">5 Years</div>
                   </div>
                   <div className='section2Column w-100'>
-                    <div className="title">Airdrop</div>
-                    <div className="desc">1%</div>
+                    <div className="title">Yield Farming</div>
+                    <div className="desc">5 Years</div>
                   </div>
                 </div>
               </div>
@@ -257,21 +294,27 @@ export default function Home() {
         {/* Randomizer Network HOW IT WORKS */}
         <section className="newSection" id="faq">
           <div className="newWrapper">
-            <div className="newMainSection mt-5">HOW IT WORKS</div>
-            <div className="newMainSectionText">The main deflationary mechanisms of Randomizer.network include a 10% fee on all token transfers and early unstaking fees of up to 25%.</div>
+            <div className="newMainSection mt-5 fs-1 fw-bold">HOW IT WORKS</div>
+            <div className="newMainSectionText">The Randomizer.network includes a 3% fee for all future games</div>
             <div className="newMainSectionRow">
               <div className="newMainSectionColumn">
-                <div>Distribution of sell fees:</div>
+                <div>Distribution of fees</div>
                 <ul>
-                  <li>- 5% of the fees will be rewarded to stakers</li>
-                  <li>- 2.5% of the fees will be added to liquity pool forever</li>
-                  <li>- 2.5% will be burned forever</li>
+                  <li>- 50% goes to the core team</li>
+                  <li>- 30% goes to Meta Pass Hodlers / Staking / Yield</li>
+                  <li>- 10% is added to the pair RN/USDC pair</li>
+                  <li>- 10% is burned</li>
                 </ul>
               </div>
               <div className="newMainSectionColumn">
-                <div>Early unstaking fees:</div>
+                <div>RN Token allocations</div>
                 <ul>
-                  <li>There will also be an option to unstake early. This will apply a 25% burn fee. If users wait 4 weeks to unstake, there will be no fee..</li>
+                  <li>- 50% Core Team Funds used for operational costs</li>
+                  <li>- 15% for the Meta Game Pass </li>
+                  <li>- 15% for Staking and Yield Farming </li>
+                  <li>- 10% RN Tokens are added as liquidity for the RN/USDC pair</li>
+                  <li>- 10% RN Tokens are burned</li>
+                  {/* <li>There will also be an option to unstake early. This will apply a 25% burn fee. If users wait 4 weeks to unstake, there will be no fee..</li> */}
                 </ul>
               </div>
             </div>
@@ -282,7 +325,7 @@ export default function Home() {
         {/* Randomizer Network HOW IT WORKS */}
         <section className="newSection" id="faq">
           <div className="newWrapper">
-            <div className="newMainSection mt-5">HOW IT WORKS</div>
+            <div className="newMainSection mt-5 fs-1 fw-bold">HOW IT WORKS</div>
             <div className="newMainSectionText">The main deflationary mechanisms of Randomizer.network include a 10% fee on all token transfers and allows allocations via staking for early IGO believers.</div>
             <div className="newMainSectionRow">
               <div className="newMainSectionColumn">
@@ -326,16 +369,16 @@ export default function Home() {
                 </div>
                 <div className="col">
                   <div className="th">Staking</div>
-                  <div className="td">3000</div>
-                  <div className="td">6000</div>
-                  <div className="td">12,500</div>
-                  <div className="td">25,000</div>
+                  <div className="td">3,000</div>
+                  <div className="td">10,000</div>
                   <div className="td">30,000</div>
-                  <div className="td">40,000</div>
-                  <div className="td">50,000</div>
-                  <div className="td">75,000</div>
-                  <div className="td">100,000</div>
-                  <div className="td">150,000</div>
+                  <div className="td">60,000</div>
+                  <div className="td">90,000</div>
+                  <div className="td">125,000</div>
+                  <div className="td">250,000</div>
+                  <div className="td">500,000</div>
+                  <div className="td">750,000</div>
+                  <div className="td">1,000,000</div>
                 </div>
                 <div className="col">
                   <div className="th">Whitelist Requirements</div>
