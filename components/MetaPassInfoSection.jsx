@@ -3,65 +3,39 @@ import Image from 'next/image'
 
 import MetaPass from "../public/assets/images/metapass/meta-game-pass.mp4"
 
-export default function MetaPassSection() {
+export default function MetaPassInfoSection() {
   return (
-    <section className="banner-section">
+    <section className="banner-section" style={{background: "#000"}}>
       <div className="container">
         <div className="banner-content text-center top-section">
 
         <div className="topSection">
-        <div className="row g-0 mb-2">
+        <div className="row mb-2">
           <div className="col-12 col-md-6">
-            <div className="metapass commonMetapass">
+            <div>
               <div className="w-80 meta">
                 {/* <img className="w-100 meta" src="assets/images/metapass/meta-game-pass.gif"></img> */}
-                <video width="100%" height="100%" muted autoPlay={"autoplay"} preload="auto" loop>
+                <video width="100%" height="100%" muted autoPlay={"autoplay"} preload="auto" loop style={{borderRadius:"25px"}}>
                   <source src={require("../public/assets/images/metapass/meta-game-pass.mp4")} type="video/mp4" />
                   Your browser does not support HTML5 video.
                 </video>
               </div>
-              <span className="title common">RANDOMIZER META PASS</span>
-              <span className="subtitle">unlocked features</span>
-              <hr className="metaline metalineCommon" />
-              <div className="bullets">
-                <span className="description"> - Propose/Vote in RN Governance</span>
-                <span className="description"> - Daily No-Loss Lottery Participation</span>
-                <span className="description"> - Create custom trustless distributions</span>
-                <span className="description"> - Earn from future sales revenue</span>
-                <span className="description"> - Random NFT Avatar </span>
-                {/* <span className="description"> - Private Members Club</span>
-                <span className="description mb-2"> - Space Flight Lottery</span> */}
-              </div>
             </div>
           </div>
           <div className="col-12 col-md-6">
-            <div className="metapass commonMetapass">
-              {/* <img className="" src="images/metaspace/common.gif"></img> */}
-              <div className="w-100 meta">
-                {/* <Image
-                        // loader={myLoader}
-                        layout="responsive"
-                        width="400"
-                        height="400"
-                        src="/images/metapass/meta-game-pass.gif"
-                        alt="Bitcoin Lottery Protocol - Common Meta Game Pass"
-                    /> */}
-                {/* <video width="100%" height="100%" muted autoPlay={"autoplay"} preload="auto" loop>
-                  <source src={require("../public/assets/images/metapass/meta-game-pass.mp4")} type="video/mp4" />
-                  Your browser does not support HTML5 video.
-                </video> */}
-              </div>
-              <span className="title common">MIN / MAX</span>
+            <div>
+              <span className="title common">RANDOMIZER META PASS</span>
+              <br />
               <span className="subtitle">unlocked features</span>
-              <hr className="metaline metalineCommon" />
+              <hr className="metaline metalineCommon w-100" />
               <div className="bullets">
-                <span className="description"> - private no-loss lottery </span>
-                <span className="description"> - nickname blue highlight </span>
-                <span className="description"> - private member club</span>
-                {/* <span className="description"> - 2500 BTCLP & 10 NLL winnings</span> */}
-                {/* <span className="description"> - custom game creation</span> */}
-                {/* <span className="description"> - whitelabel sidechain lotteries</span> */}
-                {/* <span className="description mb-2"> - metaverse business marketing</span> */}
+                <ul className="d-flex flex-wrap align-content-center flex-column">
+                  <li className="description bullet">Propose/Vote in RN Governance</li>
+                  <li className="description bullet">Daily No-Loss Lottery Participation</li>
+                  <li className="description bullet">Create custom trustless distributions</li>
+                  <li className="description bullet">Earn from generated revenue fees</li>
+                  <li className="description bullet">Future Random NFT Avatar </li>
+                </ul>  
               </div>
             </div>
           </div>
@@ -122,6 +96,9 @@ export default function MetaPassSection() {
                 margin-top: 1rem;
                 color: #FFF;
                 text-align: left;
+            }
+            .bullet {
+              list-style-type: disc;
             }
             .metaline {
                 width: 80%;

@@ -9,7 +9,7 @@ export default function LaunchpadSection() {
           
           <div className="topSection">
 
-          <img className="randomizer-logo" src="./assets/images/logo/logo-icon-blue.svg" width="300px" height="300px" style={{ cursor: "pointer" }} />
+          <img className="randomizer-logo" src="./assets/images/logo/logo-icon-blue.svg" width="200px" height="200px" style={{ cursor: "pointer" }} />
 
             {/* <h1 className="fw-normal yellow" style={{ fontWeight: "50px", margin: "0" }}>Randomizer Network</h1> */}
             <h1 className="primaryColor mb-4" style={{fontSize:"35px"}}>Multi-Chain Launchpad </h1>
