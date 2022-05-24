@@ -18,6 +18,10 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@web3-onboard/coinbase": "^2.0.2",
     "@web3-onboard/fortmatic": "^2.0.2",
     "@web3-onboard/gnosis": "^2.0.1",

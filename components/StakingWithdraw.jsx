@@ -14,7 +14,7 @@ import { launchToast, dismissToast, warningToast } from '../utils/toastUtils';
 export default function StakingWithdraw({blockReward, stakingContract, apyRate, stakeTime, stakedInContract, stakingMaturityDate, stakingPreMaturityDate, stakingTotalDaysLocked, stakingMatured}) {
     // const { showCalculator, setShowCalculator } = useStakingStore();
     const { showWithdraw, setShowWithdraw } = useStakingStore();
-    const {bnbWallet} = useWalletStore();
+    const {wallet} = useWalletStore();
 
     console.log('showWithdraw', showWithdraw)
     // console.log('', )
@@ -31,16 +31,16 @@ export default function StakingWithdraw({blockReward, stakingContract, apyRate, 
     }
 
     // const stakeTokens = async () => {
-    //     // await token.stake(MaxUint256, { from: bnbWallet.provider.selectedAddress })
-    //     // const { hash } = await stakingContract.stake(MaxUint256, { from: bnbWallet.provider.selectedAddress })
-    //     const { hash } = await stakingContract.stake(utils.parseEther(stakingAmount), { from: bnbWallet.provider.selectedAddress })
+    //     // await token.stake(MaxUint256, { from: wallet.provider.selectedAddress })
+    //     // const { hash } = await stakingContract.stake(MaxUint256, { from: wallet.provider.selectedAddress })
+    //     const { hash } = await stakingContract.stake(utils.parseEther(stakingAmount), { from: wallet.provider.selectedAddress })
     //     console.log("hash", hash)
     //     // launchToast(`Successfully contributed contract staking!`, hash, 5000)
     //   }
 
       const withdrawTokens = async () => {
         try {
-            await stakingContract.withdraw({ from: bnbWallet.provider.selectedAddress })
+            await stakingContract.withdraw({ from: wallet.provider.selectedAddress })
         } catch (error) {
             if(error.data.message == 'execution reverted: Requesting before lock time') {
                 console.timeLog('error', error)
@@ -51,7 +51,7 @@ export default function StakingWithdraw({blockReward, stakingContract, apyRate, 
 
     const emergencyWithdrawTokens = async () => {
         try {
-            await stakingContract.emergencyWithdraw({ from: bnbWallet.provider.selectedAddress })
+            await stakingContract.emergencyWithdraw({ from: wallet.provider.selectedAddress })
         } catch (error) {
             console.log('error', error);
             if(error.data.message == "No stakes found for user") {

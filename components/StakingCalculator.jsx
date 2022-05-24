@@ -10,7 +10,7 @@ import { launchToast, dismissToast, warningToast } from '../utils/toastUtils';
 
 export default function StakingCalculator({blockReward, stakingContract, apyRate, stakeTime}) {
     const { showCalculator, setShowCalculator } = useStakingStore();
-    const {bnbWallet} = useWalletStore();
+    const {wallet} = useWalletStore();
 
     const [stakingReward, setStakingReward] = useState("0.0000");
     const [stakingAmount, setStakingAmount] = useState(undefined || "");
@@ -24,9 +24,9 @@ export default function StakingCalculator({blockReward, stakingContract, apyRate
     }
 
     const stakeTokens = async () => {
-        // await token.stake(MaxUint256, { from: bnbWallet.provider.selectedAddress })
-        // const { hash } = await stakingContract.stake(MaxUint256, { from: bnbWallet.provider.selectedAddress })
-        const { hash } = await stakingContract.stake(utils.parseEther(stakingAmount), { from: bnbWallet.provider.selectedAddress })
+        // await token.stake(MaxUint256, { from: wallet.provider.selectedAddress })
+        // const { hash } = await stakingContract.stake(MaxUint256, { from: wallet.provider.selectedAddress })
+        const { hash } = await stakingContract.stake(utils.parseEther(stakingAmount), { from: wallet.provider.selectedAddress })
         console.log("hash", hash)
         // launchToast(`Successfully contributed contract staking!`, hash, 5000)
       }

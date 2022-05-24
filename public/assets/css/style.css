@@ -3462,7 +3462,7 @@ button.stakingButtons.active {
 
 .default-button:hover {
 	transform: translate(4px, 4px);
-	color: #fff
+	color: #fff !important;
 }
 
 .default-button:hover:before {

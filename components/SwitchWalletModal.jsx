@@ -7,10 +7,10 @@ import { seed } from "../constants/tokens.js"
 export default function SwitchWalletModal(props) {
     // console.log('props', props)
     const {showWalletsModal} = useMenuStore();
-    const {address,bnbWallet,onboard} = useWalletStore();
+    const {address,wallet,onboard} = useWalletStore();
     const seeds = (seedName) => (seed.filter(seeds => seeds.name == seedName));
     const rpcNetwork = seeds("NETWORK")[0].network;
-    const network = rpcNetwork === "mainnet" ? "" : rpcNetwork + "."
+    const network = rpcNetwork === "mainnet" ? "" : rpcNetwork
 
     let wrapperRef = useRef()
     useEffect(() => {
@@ -40,6 +40,8 @@ export default function SwitchWalletModal(props) {
         }, 2000);
     }
 
+    console.log('onboard', onboard)
+
     return (
         <Fragment>
             <Modal handleClose={() => showWalletsModal(false)}>
@@ -61,7 +63,7 @@ export default function SwitchWalletModal(props) {
                                             </svg>
                                         </div> */}
                                     </div>
-                                    {bnbWallet.provider &&
+                                    {wallet.provider &&
                                         <>
                                             <div style={{color: "#000"}}>By connecting a wallet, you agree to Randomizer Network 
                                                 <a href="/terms-of-service" style={{color: "#263C91", padding: "0 5px"}}> Terms of Service </a> 
@@ -77,7 +79,7 @@ export default function SwitchWalletModal(props) {
                                                         <div className="walletBorder">
 
                                                             <div className="connectedTo">
-                                                                <h5 className="col-12 mt-3" style={{color: "#000"}}> Connected with {bnbWallet.name} </h5>
+                                                                <h5 className="col-12 mt-3" style={{color: "#000"}}> Connected with {wallet.name} </h5>
                                                             </div>
 
                                                             <h5 className="col-12 mb-10" style={{ color: "#000", padding: "10px", fontSize: "1rem", fontWeight: "600"}}>{props.address}</h5>
@@ -103,7 +105,7 @@ export default function SwitchWalletModal(props) {
                                                                 </div>
 
                                                                 <div className="col-6 text-md-center">
-                                                                    <a target="_blank" rel="noopener noreferrer" href={`https://${network}.bscscan.com/address/${address}`} className="walletExplorer">
+                                                                    <a target="_blank" rel="noopener noreferrer" href={`https://${network}.etherscan.io/address/${address}`} className="walletExplorer">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
                                                                         </svg>
@@ -115,30 +117,38 @@ export default function SwitchWalletModal(props) {
                                                         
                                                     </div>
 
-                                                    <div className="col-3">
-                                                        <button className="text-white walletSmallButtons" 
+                                                    <div className="col-3 d-flex justify-content-center flex-column">
+                                                        {/* <button className="text-white walletSmallButtons" 
                                                             onClick={async () => {
                                                             try {
                                                                 // await readyToTransact()
-                                                                await onboard.walletCheck()
+                                                                console.log('onboard', onboard)
+                                                                showWalletsModal(false);
+                                                                await onboard.connectWallet()
                                                             } catch (error) {}
                                                         }}>
                                                             Config
-                                                        </button>
+                                                        </button> */}
                                                         <button
                                                             className="text-white walletSmallButtons"
                                                             onClick={async () => {
                                                                 try {
-                                                                    await onboard.walletSelect()
+                                                                    console.log('onboard', onboard)
+                                                                    showWalletsModal(false);
+                                                                    await onboard.connectWallet()
                                                                 } catch (error) {}
                                                             }}>
                                                             Switch
                                                         </button>
                                                         <button className="text-white walletSmallButtons" onClick={async () => {
                                                             try {
-                                                                await onboard.walletReset();
+                                                                console.log('wtf')
+                                                                console.log('onboard.state.get()', onboard.state.get())
+                                                                const [primaryWallet] = onboard.state.get().wallets
+                                                                console.log('primaryWallet.label', primaryWallet.label)
+                                                                await onboard.disconnectWallet({ label: primaryWallet.label });
                                                                 showWalletsModal(false);
-                                                            } catch (error) {}
+                                                            } catch (error) {console.log('error', error)}
                                                         }}>
                                                             Reset
                                                         </button>
@@ -193,6 +203,7 @@ export default function SwitchWalletModal(props) {
                     }
                     .walletSmallButtons {
                         width: 100%;
+                        height: 45px;
                         padding: 4px 6px;
                         border: 1px solid rgba(55, 107, 173, 0.44);
                         color: rgb(33, 114, 229);

@@ -49,6 +49,13 @@ export default class Document extends NextDocument {
             .bn-notify-notification-info-message { color: #FFF !important; }
             .bn-notify-notification-close { color: #FFF !important; }
           `}</style>
+          <style>{`
+            :root {
+              --onboard-modal-z-index{
+                z-index: 9999;
+              }
+            }
+          `}</style>
         </Head>
         <body>
           <Main />

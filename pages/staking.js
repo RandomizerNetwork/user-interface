@@ -21,7 +21,7 @@ import { launchToast, dismissToast, warningToast } from '../utils/toastUtils';
 
 export default function Staking() {
     const {
-        ens, address, network, bnbWallet, onboard, notify, provider, setEns, setAddress, setNetwork, setBnbWallet, setOnboard, setNotify,
+        ens, address, network, wallet, onboard, notify, provider, setEns, setAddress, setNetwork, setWallet, setOnboard, setNotify,
         setProvider, readyToTransact, setReadyToTransact, setStartBlock, setEndBlock, balanceRANDOM, setBalanceETH, setBalanceWETH, setBalanceWBTC, setBalanceLINK,
         setBalanceUNI, setBalanceDAI, setBalanceUSDC, setBalanceUSDT,
         endBlock, setCurrentBlockNumber
@@ -32,7 +32,7 @@ export default function Staking() {
     const { apyRate, stakeTime, stakingShort, stakingMatured, stakingTotalDaysLocked, stakingPreMaturityDate, stakingMaturityDate, blockReward, stakingContract, stakingContractNr, stakingContractAllowance, stakedInContract, setStake } = useStaking();
 
     const approveTokens = async () => {
-        await token.approve(stakingContract.address, MaxUint256, { from: bnbWallet.provider.selectedAddress })
+        await token.approve(stakingContract.address, MaxUint256, { from: wallet.provider.selectedAddress })
     }
 
     // console.log('Math.floor(stakedInContract)', Math.floor(stakedInContract))

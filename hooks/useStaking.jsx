@@ -12,7 +12,7 @@ import moment from 'moment';
 
 export default function useStaking() {
     const {token, staking7Days, staking14Days, staking30Days, staking60Days} = useContractsStore();
-    const {address, network, bnbWallet, setBalanceRANDOM, setBalanceETH} = useWalletStore();
+    const {address, network, wallet, setBalanceRANDOM, setBalanceETH} = useWalletStore();
     const [blockReward, setBlockReward] = useState(5); // 5% APY Reward Default
     const [apyRate, setAPYRate] = useState(5); // 5% APY Reward Default
     const [stakingShort, setStakingShort] = useState(""); // 7 Days staking Default 
@@ -52,7 +52,7 @@ export default function useStaking() {
 
     const listenForStaking = (stakingContract) => {
         try {
-            const myAddress = utils.getAddress(bnbWallet.provider.selectedAddress);
+            const myAddress = utils.getAddress(wallet.provider.selectedAddress);
             const filter = stakingContract.filters.Staked(token.address, myAddress, null)
 
             stakingContract.on(filter, (from, to, value, event) => {
@@ -74,7 +74,7 @@ export default function useStaking() {
     const listenForWithdrawals = (stakingContract) => {
         try {
             
-            const myAddress = utils.getAddress(bnbWallet.provider.selectedAddress);
+            const myAddress = utils.getAddress(wallet.provider.selectedAddress);
             const filter = stakingContract.filters.PaidOut(token.address, myAddress, null, null)
 
             stakingContract.on(filter, (tokenAddress, staker, value, reward, event) => {
@@ -97,8 +97,8 @@ export default function useStaking() {
 
     const checkAllowance = async (stakingContract) => {
         try {
-            if(bnbWallet.provider?.selectedAddress?.length !== 42) return;
-            const allowances = (await token.allowance(bnbWallet.provider.selectedAddress, stakingContract.address)).toString();
+            if(wallet.provider?.selectedAddress?.length !== 42) return;
+            const allowances = (await token.allowance(wallet.provider.selectedAddress, stakingContract.address)).toString();
             console.log('allowances', allowances);
             setStakingContractAllowance(allowances);
         } catch (error) { 
@@ -109,8 +109,8 @@ export default function useStaking() {
 
     const checkStakeAndMaturity = async (stakingContract) => {
         try {
-            if(bnbWallet.provider?.selectedAddress?.length !== 42) return;
-            const staked = await stakingContract.userDeposits(bnbWallet.provider.selectedAddress);
+            if(wallet.provider?.selectedAddress?.length !== 42) return;
+            const staked = await stakingContract.userDeposits(wallet.provider.selectedAddress);
             const prematurity = parseInt(staked[1]) == 0 ? 0 : moment(parseInt(staked[1]) * 1000).format('L') + " " + moment(parseInt(staked[1]) * 1000).format('LTS');
             const maturity = parseInt(staked[2]) == 0 ? 0 : moment(parseInt(staked[2]) * 1000).format('L') + " " + moment(parseInt(staked[1]) * 1000).format('LTS');
             const totalStake = Number(utils.formatEther(staked[0]).substring(0, position(18, staked[0])))

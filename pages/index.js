@@ -2,13 +2,14 @@ import Head from 'next/head'
 // import Image from 'next/image'
 // import { pure } from 'recompose';
 
+import LaunchpadSection from '../components/LaunchpadSection'
 import SwitchWalletModal from '../components/SwitchWalletModal'
 import Footer from '../components/Footer'
 import useWalletStore from '../store/useWalletStore'
 
 export default function Home() {
   const {
-    ens, address, network, bnbWallet, onboard, notify, provider, setEns, setAddress, setNetwork, setBnbWallet, setOnboard, setNotify,
+    ens, address, network, wallet, onboard, notify, provider, setEns, setAddress, setNetwork, setWallet, setOnboard, setNotify,
     setProvider, readyToTransact, setReadyToTransact, setStartBlock, setEndBlock, setBalanceETH, setBalanceWETH, setBalanceWBTC, setBalanceLINK,
     setBalanceUNI, setBalanceDAI, setBalanceUSDC, setBalanceUSDT,
     endBlock, setCurrentBlockNumber
@@ -20,127 +21,20 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Randomizer Network - Multi-chain Metaverse Launchpad for innovative new projects</title>
-        <meta name="description" content="Trustless Randomization Network, for people that want to leverage randomness sources of entropy on top of major EVM Chains!" />
+        <title>Randomizer Network - Multi-chain Metaverse Launchpad for Web3 Startups</title>
+        <meta name="description" content="Randomizer Network is a Decentranlized Randomization Protocol that enables Programable Distributions with Randomness Emissions and Staking for DAO Tokens and NFT Campaigns backed by Chainlinks Verificables Function and Keepers on top of all EVM Chains!" />
       </Head>
       <div>
-
-        {/* <!-- ===========Banner Section start Here========== --> */}
-        {/* <section className="banner-section">
-          <div className="container">
-            <div>
-              <div className="banner-content text-center top-section">
-                <img className="randomizer-logo" src="./assets/images/logo/logo-white.svg" width="300px" height="300px" style={{ cursor: "pointer" }} />
-                <div className="topSection">
-                  <h1 className="fw-normal text-white mb-4">multi-chain play to earn <br /> metaverse ido launchpad</h1>
-                  <p>Innovation hub, incubator, ido launchpad
-                    <br /> curating high-quality play to earn
-                    <br /> projects on the blockchain multiverse
-                  </p>
-                  <div className="col-12 col-sm-12 mt-3">
-                    <div className="button-wrapper text-center">
-                      <a href="apply-for-incubator-and-ido" className="default-button"><span>Apply As
-                        A Project <i className="icofont-circled-right"></i></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12 col-sm-4 text-sm-end mt-3">
-                    <a className="buyToken" href="https://pancakeswap.finance/pair/ngx"
-                      style={{ height: "60px", "borderRadius": "5px", "border": "3px solid #FFF", "padding": "10px", "margin": "0 0 0 5px" }}>
-                      <img className='me-2' src="./assets/images/logo/sushiswap-sushi-logo.svg" style={{ "width": "35px", "height": "35px" }} />
-                      <span className="text-white">Buy RANDOM</span>
-                    </a>
-                  </div>
-                  <div className="col-12 col-sm-4 text-sm-center mt-3">
-                    <a href="https://www.youtube.com/embed/g5eQgEuiFC8" className="default-button reverse-effect">
-                      <span>
-                        <i className="icofont-telegram"></i>
-                        Telegram
-                      </span>
-                    </a>
-                  </div>
-                  <div className="col-12 col-sm-4 text-sm-start mt-3">
-                    <a href="https://www.youtube.com/embed/g5eQgEuiFC8" className="default-button reverse-effect">
-                      <span>
-                        <i className="icofont-bullhorn"></i>
-                        Announcements
-                      </span></a>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section> */}
-        {/* <!-- ===========Banner Section start Here========== --> */}
-
-        <section className="banner-section">
-          <div className="container">
-            <div>
-              <div className="banner-content text-center top-section">
-                
-                <div className="topSection">
-
-                <img className="randomizer-logo" src="./assets/images/logo/logo-icon-blue.svg" width="300px" height="300px" style={{ cursor: "pointer" }} />
-
-                  {/* <h1 className="fw-normal yellow" style={{ fontWeight: "50px", margin: "0" }}>Randomizer Network</h1> */}
-                  <h1 className="primaryColor mb-4" style={{fontSize:"35px"}}>Multi-Chain Launchpad </h1>
-                  <h2 className="primaryColor mt-4" style={{fontSize:"25px"}}>High-quality projects on the blockchain</h2>
-                  <div className="row">
-                    
-                    <div className="col-12 col-md-6 mt-1">
-                      <div className="button-wrapper">
-                        <a href="apply-for-incubator-and-ido" className="default-button"><span>Apply As
-                          A Project <i className="icofont-circled-right"></i></span>
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="col-12 col-md-6 mt-3">
-                      <a className="rotatingButton" href="https://sushiswap.org/pair/random"
-                        style={{ height: "60px", borderRadius: "5px", border: "3px solid #FFF", "padding": "10px" }}>
-                        <img className='me-2' src="./assets/images/logo/sushiswap-sushi-logo.svg" style={{ width: "35px", height: "35px", position: "relative", zIndex: "9" }} />
-                        <span className="buyOnPancake text-white">Buy RANDOM</span>
-                      </a>
-                    </div>
-
-                    {/* <div className="col-12 col-sm-4 text-center mt-3">
-                      <a href="https://www.youtube.com/embed/g5eQgEuiFC8" className="default-button reverse-effect">
-                        <span>
-                          <i className="icofont-telegram icofont-3x"></i>
-                          Telegram
-                        </span>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-4 text-start mt-3">
-                      <a href="https://www.youtube.com/embed/g5eQgEuiFC8" className="default-button reverse-effect">
-                        <span>
-                          <i className="icofont-bullhorn"></i>
-                          Announcements
-                        </span>
-                      </a>
-                    </div> */}
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <LaunchpadSection />
         <SwitchWalletModal readyToTransact={readyToTransact} address={address} />
-
-        {/* <div className="stars">
+        <div className="stars">
           <div className="starsContainer">
             <video id="vidcontent" className="videoContainer" width="100%" height="100%" autoPlay loop muted >
               <source src="assets/images/metaspace/space-odyssey-hd.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-        </div> */}
+        </div>
         {/* <!-- ===========Banner Section Ends Here========== --> */}
 
 
@@ -211,11 +105,11 @@ export default function Home() {
                 </div>
               </section>
 
-              {/* <div className="button-wrapper text-center mt-5 mb-5">
-					<a href="game-list.html" className="default-button"><span>Browse All Projects <i
+              <div className="button-wrapper text-center mt-5 mb-5">
+					<a href="#launchpadido" className="default-button"><span>Browse All Projects <i
 								className="icofont-circled-right"></i></span>
 					</a>
-				</div> */}
+				</div>
             </div>
 
           </div>
@@ -232,14 +126,13 @@ export default function Home() {
                   <div className="col-lg-6">
                     <div className="cta-content">
                       <p className="theme-color text-uppercase ls-2">Let's Play</p>
-                      <h2 className="mb-3">JOIN <span className="theme-color text-uppercase">Randomizer Network</span> PRO
-                        GAMERS TODAY!</h2>
+                      <h2 className="mb-3">JOIN <span className="theme-color text-uppercase">Randomizer Network</span> TODAY!</h2>
                       <p className="mb-4">
-                        We hand-pick high quality Blockchain Games & NFT's which we gracefully help to support
-                        multi-chain blockchains with their own DAO Governance System. Join the play to earn revolution!
+                        We are building the most trustless and DAO customizable DeFi Launchpad. We are building a No-Code customizable Chainlink multi-chain DAO & NFT's distribution manager. Join the play to earn revolution! 
                       </p>
-                      <a href="signup.html" className="default-button"><span>Join Community <i
-                        className="icofont-circled-right"></i></span></a>
+                      <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer" className="default-button walletExplorer">
+                        <span>Join Community <i className="icofont-circled-right"></i></span>
+                      </a>
                     </div>
                   </div>
                   <div className="col-lg-6">

@@ -84,6 +84,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     setWeb3Onboard(initWeb3Onboard)
+    setOnboard(initWeb3Onboard); // make it globally accessible
     setNotify(initNotify())
   }, [])
 
@@ -97,7 +98,11 @@ function MyApp({ Component, pageProps }) {
       'connectedWallets',
       JSON.stringify(connectedWalletsLabelArray)
     )
-
+    
+    console.log('connectedWalletsLabelArray', connectedWalletsLabelArray)
+    console.log('connectedWallets', connectedWallets)
+    setAddress(connectedWallets[0]?.accounts[0]?.address)
+    setNetwork(connectedWallets[0]?.chains[0]?.id);
     // // Check for Magic Wallet user session
     // if (connectedWalletsLabelArray.includes('Magic Wallet')) {
     //   const [magicWalletProvider] = connectedWallets.filter(
@@ -140,9 +145,12 @@ function MyApp({ Component, pageProps }) {
       window.localStorage.getItem('connectedWallets')
     )
 
-    if (previouslyConnectedWallets?.length) {
+    if (previouslyConnectedWallets?.length && web3Onboard) {
       async function setWalletFromLocalStorage() {
         await connect({ autoSelect: previouslyConnectedWallets[0] })
+        // await web3Onboard.connectWallet({ 
+        //   autoSelect: { label: previouslyConnectedWallets[0], disableModals: true } 
+        // })
       }
       setWalletFromLocalStorage()
     }
@@ -170,7 +178,7 @@ function MyApp({ Component, pageProps }) {
   //     balance: setBalance,
   //     wallet: async (wallet) => {
   //       if (wallet.provider) {
-  //         setBnbWallet(wallet)
+  //         setWallet(wallet)
   //         // provider = new providers.Web3Provider("https://ProfitableTradingUSA:N3v3rm!nd@apis-sj.ankr.com/e96dd9de70274551a854c2d999d0ee20/270c2f3c5c3ec9a14d1c1bb869676150/binance/full/test")
   //         // provider = new providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545")
   //         // const localProvider = new providers.WebSocketProvider(`https://data-seed-prebsc-1-s1.binance.org:8545`);
@@ -205,7 +213,7 @@ function MyApp({ Component, pageProps }) {
   //         window.localStorage.setItem('selectedWallet', wallet.name)
   //       } else {
   //         setProvider(null);
-  //         setBnbWallet({})
+  //         setWallet({})
   //       }
   //     }
   //   })

@@ -7,6 +7,15 @@ import useWalletStore from '../store/useWalletStore'
 import GetWalletIcon from './GetWalletIcon'
 import getNetworkName from '../utils/getNetworkName'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+// import { fas } from '@fortawesome/free-brands-svg-icons'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab)
+// library.add(fas, faCoffee)
+
 export default function HeaderNav() {    
   const { asPath, pathname } = useRouter();
   const [menuActive, setMenuActive] = useState(false);
@@ -14,26 +23,26 @@ export default function HeaderNav() {
 //   console.log('pathname', pathname)
   const { showWalletsModal } = useMenuStore();
   const {
-    ens, address, network, wallet, bnbWallet,onboard, notify, provider, setEns, setAddress, setNetwork, setWallet, setOnboard, setNotify,
+    ens, address, network, wallet, bnbWallet, onboard, notify, provider, setEns, setAddress, setNetwork, setWallet, setOnboard, setNotify,
     setProvider, readyToTransact, setReadyToTransact, setStartBlock, setEndBlock, setBalanceETH, setBalanceWETH, setBalanceWBTC, setBalanceLINK,
     setBalanceUNI, setBalanceDAI, setBalanceUSDC, setBalanceUSDT,
     endBlock, setCurrentBlockNumber,
     connect
   } = useWalletStore();
 
-  console.log('wallet', wallet)
-  console.log('bnbWallet', bnbWallet)
+  // console.log('wallet', wallet)
+  // console.log('bnbWallet', bnbWallet)
   const cleanAddress = address !== null && address !== undefined ? address.substr(0, 6) + "..." + address.substr(-4) : ""
 
     return (
-        <header className="header-section">
+        <header className="header-section d-flex flex-column justify-content-center" style={{height:"75px"}}>
         <div className="container" style={{ paddingRight: "0px" }}>
           <div className="header-holder d-flex flex-wrap justify-content-between align-items-center">
                 <Link href="/">
                     <a>
                         <div className="brand-logo d-none d-lg-inline-block">
                             <div className="logo">
-                                <img src="./assets/images/logo/logo-blue.svg" width="200px" />
+                                <img src="./assets/images/logo/logo-blue.svg" width="50px" />
                                 {/* <img style={{padding: "10px 5px 10px 0px"}} src="./assets/images/logo/logo-blue.svg" width="60px" /> */}
                                 {/* <span>Randomizer Network</span> */}
                             </div>
@@ -48,21 +57,13 @@ export default function HeaderNav() {
                             <img src="./assets/images/logo/logo-icon-blue.svg" width="50px" height="50px" />
                         </div>
                     </Link>
-
-
-                    {/* <div className="col-3 text-center"> 
-                      <i className="icofont-twitter icofont-3x"></i> 
-                      <img style={{width:"48px"}} src="assets/images/metaspace/icons/medium.svg" />
-                      <i className="icofont-telegram icofont-3x"></i> 
-                    </div> */}
-
-                  <div className="menu-area mt-1">
+                  <div className="menu-area">
                     <ul className={`menu ${menuActive ? 'active' : ''}`}>
 
-                      <li className="mr-3">
-                        <a className="superLink p-0" href="#"><i className="icofont-twitter primaryColor icofont-2x imgHover"></i> </a>
-                        <a className="superLink p-0" href="#"><span className="primaryColor imgHover" style={{fontFamily: "gt-super, Georgia, Cambria, 'Times New Roman', Times, serif", fontSize: "32px", margin: "10px"}}>M</span></a>
-                        <a className="superLink p-0" href="#"><i className="icofont-telegram primaryColor icofont-2x imgHover" style={{marginRight: "20px"}}></i> </a>
+                      <li className="d-flex align-items-center">
+                        <a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "github"]} /> </a>
+                        <a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "twitter"]} /> </a>
+                        <a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "discord"]} /> </a>
                       </li>
 
                       <li>
@@ -76,9 +77,9 @@ export default function HeaderNav() {
                         </Link>
                       </li>
                       {/* <li>
-                        <Link href="/faq">
-                            <a className={asPath === "/faq" ? "active": ""}> 📖 FAQ </a>
-                        </Link>
+                          <Link href="/faq">
+                              <a className={`superLink pe-5 ${asPath === "/faq" ? "active": ""}`}> Docs </a>
+                          </Link>
                       </li> */}
                     </ul>
 

@@ -33,9 +33,7 @@ export default function Footer() {
                           <img src="./assets/images/logo/logo-icon-blue.svg" width="70px" height="70px" style={{cursor: "pointer"}} />
                         </div>
                         <div className="col-12 col-lg-9">
-                          <p className="mb-4">Randomizer Network is a decentralized multi-chain fundraising platform
-                            enabling projects to raise capital and promise safety to early stage
-                            investors. Stake RANDOM tokens to get priority-access to promising
+                          <p className="mb-4">Randomizer Network is a decentralized multi-chain fundraising platform that enables project customizations for distribution mechanisms that have DAO Treasuries and randomized distributions and Staking RANDOM tokens to get priority-access to promising
                             projects.</p>
                         </div>
                       </div>

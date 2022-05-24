@@ -14,7 +14,8 @@
 
 export const seed = [
     // {name: "NETWORK", id: 97, network: "Binance Smart Chain"}, 
-    {name: "NETWORK", id: 42, network: "kovan"}, 
+    // {name: "NETWORK", id: 42, network: "kovan"}, 
+    {name: "NETWORK", id: 4, network: "rinkeby"}, 
     {name: "SEED", address: "0x0561B1498FA358a1b5E8F21844c98C9DE01161B3"}
     // {name: "SEED", address: "0x0000000000000000000000000000000000000000"}
 ]
