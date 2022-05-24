@@ -111,7 +111,7 @@ export const initWeb3Onboard = init({
     name: 'Randomizer Network',
     icon: randomizerIcon,
     logo: randomizerIcon,
-    description: 'A unique chance to get a key that opens a world of possibilities in the decentralized trustless metaverse. The Randomizer Network DAO (Meta Game Pass) is backed by Chainlink VRF & Keepers and gives a daily chance to win RN Governance Tokens in the Daily No Loss Lottery.',
+    description: 'A unique chance to get a key that opens a world of possibilities in the decentralized trustless metaverse. The Randomizer Network DAO (Meta Game Pass) is backed by Chainlink VRF & Keepers and gives a daily chance to win RANDOM Governance Tokens in the Daily No Loss Lottery.',
     recommendedInjectedWallets: [
       { name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
       { name: 'MetaMask', url: 'https://metamask.io' }

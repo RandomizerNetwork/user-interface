@@ -30,21 +30,26 @@ export default function Footer() {
                   <div className="footer-middle-item-wrapper">
                     <div className="footer-middle-item mb-lg-0">
                       <div className="row">
-                        <div className="col-12">
+                        <div className="col-2">
                           <img src="./assets/images/logo/logo-icon-blue.svg" width="70px" height="70px" style={{cursor: "pointer"}} />
                         </div>
-                        <div className="col-12 col-lg-9">
-                          <p className="mb-4">
+                        <div className="col-10">
+                          <p className="mb-1">
                             {/* Randomizer Network is a decentralized multi-chain fundraising platform that enables project customizations for distribution mechanisms that have DAO Treasuries and randomized distributions and Staking RANDOM tokens to get priority-access to promising projects. */}
-                            Randomizer Metaverse Network is a No-Code Trustless Random Entropy Generator that players, creators and influencers use to create their own DAO Distributions.
+                            Randomizer Network is a No-Code Trustless Random Entropy Generator that players, creators and influencers use to create their own Decentralized DAO Distributions and Future Metaverse Tools.
                           </p>
+                          <div className="fm-item-content d-flex">
+                            <div className="primary-color"><a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-2" style={{width:"40px"}} icon={["fab", "github"]} /> </a></div>
+                            <div className="primary-color"><a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-2" style={{width:"40px"}} icon={["fab", "twitter"]} /> </a></div>
+                            <div className="primary-color"><a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-2" style={{width:"40px"}} icon={["fab", "discord"]} /> </a></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                  <div className="footer-middle-item-wrapper" style={{ textAlign: "left" }}>
+                  <div className="footer-middle-item-wrapper d-flex justify-content-center" style={{ textAlign: "left" }}>
                     <div className="footer-middle-item mb-lg-0">
                       <div className="fm-item-title">
                         <h4 className="primary-color">General</h4>
@@ -60,15 +65,15 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                  <div className="footer-middle-item-wrapper" style={{ textAlign: "left" }}>
+                  <div className="footer-middle-item-wrapper d-flex justify-content-center" style={{ textAlign: "left" }}>
                     <div className="footer-middle-item-3 mb-lg-0">
                       <div className="fm-item-title">
                         <h4 className="primary-color">Socials:</h4>
                       </div>
-                      <div className="fm-item-content d-flex align-items-center">
-                        <div className="primary-color"><a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-2" style={{width:"40px"}} icon={["fab", "github"]} /> </a></div>
-                        <div className="primary-color"><a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-2" style={{width:"40px"}} icon={["fab", "twitter"]} /> </a></div>
-                        <div className="primary-color"><a className="superLink p-0" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-2" style={{width:"40px"}} icon={["fab", "discord"]} /> </a></div>
+                      <div className="d-flex flex-column">
+                        <p><a className="linkUrl" href="/terms-of-use">Terms of use</a></p>
+                        <p><a className="linkUrl" href="/terms-of-use">Terms of sale</a></p>
+                        <p><a className="linkUrl" href="/privacy-policy">Privacy Policy</a></p>
                       </div>
                       {/* justify-content-evenly */}
                     </div>
@@ -76,26 +81,25 @@ export default function Footer() {
                 </div>
                 <div className="col-12 mt-5 mb-5">
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 text-center">
                       <div className="footer-bottom-content">
                         &copy; Randomizer Network {`${new Date().getFullYear()}`}. All rights reserved.
                       </div>
                     </div>
-                    <div className="col-5">
-                      <div className="row" style={{ textAlign: "right" }}>
-                        <div className="footer-bottom-content">
-                          <a href="/terms-of-use" style={{ marginRight: "5px", textDecoration: "underline" }}>Terms of use</a>
-                          <a href="/privacy-policy" style={{ marginRight: "5px", textDecoration: "underline" }}>Privacy Policy</a>
-                          <a href="/cookies-policy" style={{ textDecoration: "underline" }}>Cookies Policy</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-1"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <style jsx>{`
+            .linkUrl {
+              color: #FFF;
+              text-decoration: none;
+            }
+            .linkUrl:hover {
+              color: #FFDD00;
+            }
+          `}</style>
         </footer>
     )
 }

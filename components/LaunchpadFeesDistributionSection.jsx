@@ -10,8 +10,8 @@ export default function LaunchpadFeesDistributionSection() {
               <div className="newMainSectionColumn">
                 <div>Distribution of fees</div>
                 <ul>
-                  <li>- 50% goes to the Core Team for expenses</li>
-                  <li>- 10% is added to the pair RN/USDC pair</li>
+                  <li>- 50% goes to the Core Team for operational expenses</li>
+                  <li>- 10% is added to the pair RANDOM/USDC pair</li>
                   <li>- 10% goes to Meta Pass Hodlers</li>
                   <li>- 10% is burned after every game</li>
                   <li>- 5% goes to the Staking System</li>

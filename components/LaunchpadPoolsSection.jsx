@@ -5,10 +5,10 @@ export default function LaunchpadPoolsSection() {
         <section id="launchpadido" className="match-section padding-bottom mt-5" style={{ background: "#00081f", "borderTopLeftRadius": "10px", "borderTopRightRadius": "10px", "padding": "30px" }}>
           {/* <!-- <section className="match-section padding-top padding-bottom"> --> */}
           <div className="container">
-            {/* <div className="section-header">
+            <div className="section-header mb-0">
               <p>Anytime, Anywhere</p>
               <h2>All scheduled pools</h2>
-            </div> */}
+            </div>
             <div className="section-wrapper">
               <section className="match-section padding-bottom">
                 <div className="container">

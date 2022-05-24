@@ -24,7 +24,7 @@ export default function MetaPassSection() {
               <span className="subtitle">unlocked features</span>
               <hr className="metaline metalineCommon" />
               <div className="bullets">
-                <span className="description"> - Propose/Vote in RN Governance</span>
+                <span className="description"> - Propose/Vote in RANDOM Governance</span>
                 <span className="description"> - Daily No-Loss Lottery Participation</span>
                 <span className="description"> - Create custom trustless distributions</span>
                 <span className="description"> - Earn from future sales revenue</span>

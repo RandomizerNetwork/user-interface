@@ -66,11 +66,11 @@ export default function HeaderNav() {
                         <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "discord"]} /> </a>
                       </li>
 
-                      <li>
+                      {/* <li>
                         <Link href="/#launchpadido">
                             <a className={`superLink border-top-0 ${asPath === "/#launchpadido" ? "active": ""}`}> Pools </a>
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/staking">
                             <a className={`superLink ${asPath === "/staking" ? "active": "" }`}> Staking </a>

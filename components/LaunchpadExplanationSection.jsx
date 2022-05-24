@@ -10,13 +10,13 @@ export default function LaunchpadExplanationSection() {
                     <div className="newMainSectionThreeColumn text-center">
                         <h4 style={{ color: "#FFF" }}>SMALL MARKET CAP</h4>
                         <ul>
-                            <li>Randomizer Network (RN Token) will initially have a very small market cap of only $500,000 split between Uniswap and Sushiswap.</li>
+                            <li>Randomizer Network (RANDOM Token) will initially have a very small market cap of only $500,000 split between Uniswap and Sushiswap.</li>
                         </ul>
                     </div>
                     <div className="newMainSectionThreeColumn text-center">
                         <h4 style={{ color: "#FFF" }}>How to participate</h4>
                         <ul>
-                            <li>The Meta Game Passes guarantees automatic participation in the Daily No Loss Lottery Raffle RN Governance Tokens and RNLL Utility Tokens.</li>
+                            <li>The Meta Game Passes guarantees automatic participation in the Daily No Loss Lottery Raffle RANDOM Governance Tokens and RNLL Utility Tokens.</li>
                         </ul>
                     </div>
                     <div className="newMainSectionThreeColumn text-center">

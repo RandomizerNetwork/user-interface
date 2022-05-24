@@ -519,7 +519,7 @@ body a {
 	transition: .3s all linear;
 	display: inline-block;
 	text-decoration: none;
-	color: #263C90;
+	color: #FFF;
 }
 
 .primaryColor {
@@ -528,7 +528,7 @@ body a {
 }
 
 body a:hover {
-	color: #074F9A;
+	color: #FFDD00;
 }
 
 body ul {
@@ -5402,12 +5402,12 @@ button {
 }
 
 .accordion-item .accordion-header .accordion-button {
-	background: #263C91;;
+	background: #00081F;
 	box-shadow: none;
 	padding: 1rem 1.5rem;
 	-webkit-transition: .3s all linear;
 	-moz-transition: .3s all linear;
-	transition: .3s all linear;
+	transition: .7s all linear;
 	border-bottom: 1px solid rgba(255, 255, 255, .5)
 }
 
@@ -5426,24 +5426,26 @@ button {
 
 .accordion-item .accordion-header .accordion-button::after {
 	background-image: none;
-	content: "";
+	content: "-";
 	color: #fff;
 	font-size: 1.125rem;
 	display: none;
-	font-family: IcoFont !important
+	/* content: url(); */
+	/* font-family: IcoFont !important */
 }
 
 .accordion-item .accordion-header .accordion-button::before {
 	flex-shrink: 0;
 	width: 1.25rem;
 	height: 1.25rem;
-	content: "";
+	content: "+";
 	transition: transform .2s ease-in-out;
 	right: 25px;
 	position: absolute;
 	color: #fff;
 	font-size: 1.125rem;
-	font-family: IcoFont !important
+	/* content: url(); */
+	/* font-family: IcoFont !important */
 }
 
 .accordion-item .accordion-header .accordion-button .accor-header-inner .accor-thumb {
@@ -5453,14 +5455,18 @@ button {
 }
 
 .accordion-item .accordion-header .accordion-button .accor-header-inner .accor-title {
-	font-size: calc(1.275rem + 0.3vw);
+	font-size: calc(0.9rem + 0.3vw);
 	font-family: "Roboto", sans-serif;
-	text-transform: uppercase
+	text-transform: lowercase;
+}
+
+.accordion-item .accordion-header .accordion-button .accor-header-inner .accor-title::first-letter {
+	text-transform: capitalize;
 }
 
 @media(min-width: 1200px) {
 	.accordion-item .accordion-header .accordion-button .accor-header-inner .accor-title {
-		font-size: 1.5rem
+		font-size: 1.2rem
 	}
 }
 

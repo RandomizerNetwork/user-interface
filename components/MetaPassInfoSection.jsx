@@ -30,7 +30,7 @@ export default function MetaPassInfoSection() {
               <hr className="metaline metalineCommon w-100" />
               <div className="bullets">
                 <ul className="d-flex flex-wrap align-content-center flex-column">
-                  <li className="description bullet">Propose/Vote in RN Governance</li>
+                  <li className="description bullet">Propose/Vote in RANDOM Governance</li>
                   <li className="description bullet">Daily No-Loss Lottery Participation</li>
                   <li className="description bullet">Create custom trustless distributions</li>
                   <li className="description bullet">Earn from generated revenue fees</li>

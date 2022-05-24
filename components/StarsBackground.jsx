@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function StarsBackground() {
+export default function StarsBackground({children}) {
     return (
+        <>
         <div className="stars">
             <div className="starsContainer">
                 <video id="vidcontent" className="videoContainer" width="100%" height="100%" autoPlay loop muted >
@@ -10,5 +11,7 @@ export default function StarsBackground() {
                 </video>
             </div>
         </div>
+        {children}
+        </>
     )
 }
