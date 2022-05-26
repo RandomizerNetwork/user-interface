@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Image from 'next/image'
 
-import MetaPass from "../public/assets/images/metapass/meta-game-pass.mp4"
+import MetaPass from "../public/assets/images/metapass/rand.mp4"
 
 import useWalletStore from '../store/useWalletStore'
 
@@ -20,18 +20,18 @@ export default function MetaPassSection() {
                 <div className="metapass commonMetapass metapassLeft">
                   <div>
                     <div className="w-80 meta">
-                      {/* <img className="w-100 meta" src="assets/images/metapass/meta-game-pass.gif"></img> */}
+                      {/* <img className="w-100 meta" src="assets/images/metapass/rand.gif"></img> */}
                       <video width="200px" height="100%" muted autoPlay={"autoplay"} preload="auto" loop style={{ borderRadius: "25px", marginTop: "25px" }}>
-                        <source src={require("../public/assets/images/metapass/meta-game-pass.mp4")} type="video/mp4" />
+                        <source src={require("../public/assets/images/metapass/rand.mp4")} type="video/mp4" />
                         Your browser does not support HTML5 video.
                       </video>
                     </div>
                   </div>
                   <span className="title common fs-5">Randomizer Mint</span>
                   {/* <span className="subtitle fs-5">MINT</span> */}
-                  <hr className="metaline metalineCommon" />
+                  {/* <hr className="metaline metalineCommon" />
                   <span className="text-center grey">Mint Price:</span>
-                  <span className="text-center">0.05Ξ</span>
+                  <span className="text-center">0.05Ξ</span> */}
 
                   <hr className="metaline metalineCommon" />
                   <span className="text-center grey">Total Supply:</span>
@@ -81,12 +81,12 @@ export default function MetaPassSection() {
                   Mint complete */}
 
                 
-                <div className="text-start m-3 fs-6" style={{letterSpacing:"1.4px"}}>The Randomizer Network is a Decentralized Randomization Protocol that enables Deflationary Programable Distributions using a Raffle 
-                  backed by Chainlink VRF and Chainlink Keepers which provide for all Meta Pass Members a Deflationary Token Emissions that are always Verifiable and Truly Random!</div>
+                <div className="text-start m-3 fs-6" style={{letterSpacing:"1.4px"}}>The Randomizer Network is a novel deflationary Launchpad Protocol which is 
+                  backed by Chainlink Verifiable Random Function (VRF) and Chainlink Keepers to ensure that all the Meta Pass Holders automatically participate in the Daily Deflationary No Loss Lottery!</div>
 
                   <hr className="metaline metalineCommon" />
                   <div className="text-center mb-1"> Price: 0.05 ETH / Max: 2 </div>
-                  <div className="text-center mb-1">Available: <span>4375</span>/<span>5000</span></div>
+                  {/* <div className="text-center mb-1">Available: <span>4375</span>/<span>5000</span></div> */}
                   <hr className="metaline metalineCommon" />
 
                   <div className="grid-wrap mt-1">
@@ -158,7 +158,7 @@ export default function MetaPassSection() {
             }
             @media only screen and (min-width:767px) {
                 .metapass {
-                    height: 700px;
+                    height: 575px;
                     margin: 0px;
                 }
                 .metapassLeft {
