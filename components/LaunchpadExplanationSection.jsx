@@ -10,7 +10,7 @@ export default function LaunchpadExplanationSection() {
                     <div className="newMainSectionThreeColumn text-center">
                         <h4 style={{ color: "#FFF" }}>SMALL MARKET CAP</h4>
                         <ul>
-                            <li>Randomizer Network (RANDOM Token) will initially have a very small market cap of only $500,000 split between Uniswap and Sushiswap.</li>
+                            <li>Randomizer Network (RANDOM Token) will initially have a very small market cap of only $250,000 split between Uniswap and Sushiswap.</li>
                         </ul>
                     </div>
                     <div className="newMainSectionThreeColumn text-center">

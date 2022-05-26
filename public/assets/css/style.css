@@ -1464,7 +1464,8 @@ ul li {
 .active {
 	/* border-radius: 50px; */
 	/* background-color: #f5f7fd; */
-	color: #0242a1 !important;
+	/* color: #0242a1 !important; */
+	color: #FFDD00 !important;
 }
 
 .item-layer {
@@ -2796,7 +2797,7 @@ span.left5px {
 .banner-content p {
 	font-size: calc(1.275rem + 0.3vw);
 	font-family: "Roboto", sans-serif;
-	text-transform: uppercase
+	/* text-transform: uppercase */
 }
 
 @media(min-width: 1200px) {

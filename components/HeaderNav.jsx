@@ -60,11 +60,6 @@ export default function HeaderNav() {
                   <div className="menu-area">
                     <ul className={`menu ${menuActive ? 'active' : ''}`}>
 
-                      <li className="d-flex align-items-center">
-                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "github"]} /> </a>
-                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "twitter"]} /> </a>
-                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "discord"]} /> </a>
-                      </li>
 
                       {/* <li>
                         <Link href="/#launchpadido">
@@ -72,10 +67,22 @@ export default function HeaderNav() {
                         </Link>
                       </li> */}
                       <li>
+                        <Link href="/no-loss-lottery">
+                            <a className={`superLink ${asPath === "/no-loss-lottery" ? "active": "" }`}> Lottery </a>
+                        </Link>
                         <Link href="/staking">
                             <a className={`superLink ${asPath === "/staking" ? "active": "" }`}> Staking </a>
                         </Link>
                       </li>
+
+                      <li className="d-flex align-items-center">
+                        {/* <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><img width="35px" height="35px" className="d-flex p-1" src="assets/images/metaspace/markets/Opensea.png"/></a>
+                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><img width="35px" height="35px" className="d-flex p-1" src="assets/images/metaspace/markets/LooksRare.png"/></a> */}
+                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "github"]} /> </a>
+                        {/* <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "twitter"]} /> </a>
+                        <a className="superLink p-0 me-2" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><FontAwesomeIcon className="d-flex p-1" style={{width:"32px"}} icon={["fab", "discord"]} /> </a> */}
+                      </li>
+
                       {/* <li>
                           <Link href="/faq">
                               <a className={`superLink pe-5 ${asPath === "/faq" ? "active": ""}`}> Docs </a>
@@ -91,7 +98,6 @@ export default function HeaderNav() {
                         }}
                       >
                         Connect Wallet
-                        {/* <i className="icofont-wallet ms-2"></i> */}
                       </button>
                     )}
 
@@ -103,11 +109,11 @@ export default function HeaderNav() {
                               <div>
                                 {address !== null && address !== undefined && (
                                   <>
-                                    <div className="row g-0" style={{ borderRadius: "25px", paddingRight: "10px", border: "2px solid #FFF" }}>
-                                      <div className="col-3" style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingLeft: "15px" }}>
+                                    <div className="row g-0" style={{ borderRadius: "25px", paddingRight: "10px", border: "2px solid rgb(255, 255, 255, 0.2)" }}>
+                                      <div className="col-3" style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingLeft: "5px" }}>
                                         <GetWalletIcon wallet={wallet} />
                                       </div>
-                                      <div className="col-9" style={{ margin: "5px 0", paddingLeft: "7px" }}>
+                                      <div className="col-9" style={{ margin: "5px 0" }}>
                                         <div className="text-center">
                                           <span style={{ color: "#FFF", marginTop: "7px", fontSize: "1em" }}>
                                             {network && <span>{getNetworkName(network)} </span>}

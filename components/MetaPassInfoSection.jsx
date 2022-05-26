@@ -1,8 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 
-import MetaPass from "../public/assets/images/metapass/rand.mp4"
-
 export default function MetaPassInfoSection() {
   return (
     <section className="banner-section" style={{background: "#000"}}>
@@ -16,7 +14,7 @@ export default function MetaPassInfoSection() {
               <div className="w-80 meta">
                 {/* <img className="w-100 meta" src="assets/images/metapass/rand.gif"></img> */}
                 <video width="100%" height="100%" muted autoPlay={"autoplay"} preload="auto" loop style={{borderRadius:"25px"}}>
-                  <source src={require("../public/assets/images/metapass/rand.mp4")} type="video/mp4" />
+                  <source src={require("../public/assets/images/metapass/randomizer-meta-pass.mp4")} type="video/mp4" />
                   Your browser does not support HTML5 video.
                 </video>
               </div>

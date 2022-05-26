@@ -1,11 +1,17 @@
 import {useState} from 'react'
-import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router';
 
-import MetaPass from "../public/assets/images/metapass/rand.mp4"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
+import useMetaPassStore from '../store/useMetaPassStore'
 import useWalletStore from '../store/useWalletStore'
 
 export default function MetaPassSection() {
+  const { asPath, pathname } = useRouter();
+  const { metaPass, supplyRemaining, setMetaPass, setSupplyRemaining } = useMetaPassStore();
   const { wallet } = useWalletStore();
   const [amount, setAmount] = useState(1);
   return (
@@ -22,12 +28,12 @@ export default function MetaPassSection() {
                     <div className="w-80 meta">
                       {/* <img className="w-100 meta" src="assets/images/metapass/rand.gif"></img> */}
                       <video width="200px" height="100%" muted autoPlay={"autoplay"} preload="auto" loop style={{ borderRadius: "25px", marginTop: "25px" }}>
-                        <source src={require("../public/assets/images/metapass/rand.mp4")} type="video/mp4" />
+                        <source src={require("../public/assets/images/metapass/randomizer-meta-pass.mp4")} type="video/mp4" />
                         Your browser does not support HTML5 video.
                       </video>
                     </div>
                   </div>
-                  <span className="title common fs-5">Randomizer Mint</span>
+                  <span className="title common fs-5">Randomizer Minting Phase</span>
                   {/* <span className="subtitle fs-5">MINT</span> */}
                   {/* <hr className="metaline metalineCommon" />
                   <span className="text-center grey">Mint Price:</span>
@@ -42,11 +48,16 @@ export default function MetaPassSection() {
                   <span className="text-center">0</span>
 
                   <hr className="metaline metalineCommon" />
-                  <span className="text-center terms">Terms of Sale</span>
+                  
+                  <Link href="/terms-of-sale">
+                      <a className={`superLink ${asPath === "/terms-of-sale" ? "active": "" }`}><span className="text-center terms">Terms of Sale</span></a>
+                  </Link>
 
                   <div className="d-flex mb-2">
-                    <img width="35px" height="35px" className="m-2 markets" src="assets/images/metaspace/markets/Opensea.png"></img>
-                    <img width="35px" height="35px" className="m-2 markets" src="assets/images/metaspace/markets/LooksRare.png"></img>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><img width="35px" height="35px" className="m-2 markets" src="assets/images/metaspace/markets/Opensea.png"/></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/RandomizerNetwork"><img width="35px" height="35px" className="m-2 markets" src="assets/images/metaspace/markets/LooksRare.png"/></a>
+                    {/* <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/RandomizerNet"><FontAwesomeIcon className="m-2 markets twitter" style={{width:"35px"}} icon={["fab", "twitter"]} /></a> */}
+                    <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/nq9SXYmYer"><img width="35px" height="35px" className="m-2 markets" src="assets/images/metaspace/markets/Discord.png"/></a>
                   </div>
 
                 </div>
@@ -81,8 +92,8 @@ export default function MetaPassSection() {
                   Mint complete */}
 
                 
-                <div className="text-start m-3 fs-6" style={{letterSpacing:"1.4px"}}>The Randomizer Network is a novel deflationary Launchpad Protocol which is 
-                  backed by Chainlink Verifiable Random Function (VRF) and Chainlink Keepers to ensure that all the Meta Pass Holders automatically participate in the Daily Deflationary No Loss Lottery!</div>
+                <div className="text-start m-3 fs-6" style={{letterSpacing:"1.4px"}}>The Randomizer Network is a novel deflationary Launchpad Protocol that is 
+                  backed by Chainlink Verifiable Random Function (VRF) and Chainlink Keepers and ensures that all the Meta Pass Holders automatically have a daily chance to win RANDOM Governance Tokens and RNLL Utility Tokens in the Deflationary No Loss Lottery!</div>
 
                   <hr className="metaline metalineCommon" />
                   <div className="text-center mb-1"> Price: 0.05 ETH / Max: 2 </div>
@@ -257,7 +268,12 @@ export default function MetaPassSection() {
               cursor: pointer;
             }
 
-
+            .twitter.path {
+              fill: #d3d4d8;
+            }
+            .twitter:hover {
+              fill: #FFF;
+            }
 
             // MINT SECTION
             .grid-wrap {
@@ -313,9 +329,9 @@ export default function MetaPassSection() {
             display: -ms-flexbox;
             display: flex;
             -webkit-box-pack: justify;
-            -webkit-justify-content: space-between;
+            -webkit-justify-content: center;
             -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: center;
             -webkit-box-align: center;
             -webkit-align-items: center;
             -ms-flex-align: center;
@@ -391,7 +407,7 @@ export default function MetaPassSection() {
               transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease, color 200ms ease, background-color 200ms ease;
               transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease, color 200ms ease, background-color 200ms ease, -webkit-transform 200ms ease;
               font-family: Oswald, sans-serif;
-              color: #0f0f0f;
+              color: #00081f;
               font-size: 18px;
               line-height: 1.5;
               font-weight: 500;
@@ -399,6 +415,10 @@ export default function MetaPassSection() {
               letter-spacing: 0.04em;
               text-decoration: none;
               text-transform: uppercase;
+              opacity:0.9;
+          }
+          .button:hover {
+            opacity:1;
           }
             // MINT SECTION
         `}</style>
