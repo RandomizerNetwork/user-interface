@@ -191,7 +191,7 @@ export default function Staking() {
                                 </div>
                                 <div className="col">
                                     <div className="th">Whitelist Requirements</div>
-                                    <div className="td half-top" style={{height:"40px", marginTop:"1px", borderRight: "none"}}>Lottery</div>
+                                    <div className="td half-top" style={{height:"40px", marginTop:"1px", borderRight: "none"}}>Daily Game</div>
                                     <div className="td half-top" style={{height:"100px", marginTop:"23px", borderRight: "none"}}>Twitter Like, Comment &amp; Retweet</div>
                                     <div className="td half-bot" style={{borderRight: "none"}}><span style={{height:"225px",display: "flex",flexDirection: "column",justifyContent: "center"}}>None</span></div>
                                 </div>

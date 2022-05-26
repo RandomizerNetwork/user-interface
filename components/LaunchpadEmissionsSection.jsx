@@ -9,11 +9,11 @@ export default function LaunchpadEmissionsSection() {
               <div className="newMainSectionThreeColumn text-center">
                 <div className='section3 d-block'>
                   <div className='section2Column w-100'>
-                    <div className="title">No Loss Lottery Burn</div>
+                    <div className="title">Daily Burn</div>
                     <div className="desc">10 Years</div>
                   </div>
                   <div className='section2Column w-100'>
-                    <div className="title">No Loss Lottery Rewards</div>
+                    <div className="title">Daily Draw</div>
                     <div className="desc">10 Years</div>
                   </div>
                 </div>

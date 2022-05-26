@@ -67,8 +67,8 @@ export default function HeaderNav() {
                         </Link>
                       </li> */}
                       <li>
-                        <Link href="/no-loss-lottery">
-                            <a className={`superLink ${asPath === "/no-loss-lottery" ? "active": "" }`}> Lottery </a>
+                        <Link href="/lucky-draw">
+                            <a className={`superLink ${asPath === "/lucky-draw" ? "active": "" }`}> Daily Draw </a>
                         </Link>
                         <Link href="/staking">
                             <a className={`superLink ${asPath === "/staking" ? "active": "" }`}> Staking </a>
