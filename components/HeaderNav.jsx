@@ -42,7 +42,7 @@ export default function HeaderNav() {
                     <a>
                         <div className="brand-logo d-none d-lg-inline-block">
                             <div className="logo">
-                                <img src="./assets/images/logo/logo-blue.svg" width="50px" />
+                                <img src="./assets/images/logo/logo-icon-white.svg" width="50px" />
                                 {/* <img style={{padding: "10px 5px 10px 0px"}} src="./assets/images/logo/logo-blue.svg" width="60px" /> */}
                                 {/* <span>Randomizer Network</span> */}
                             </div>
@@ -54,7 +54,7 @@ export default function HeaderNav() {
                 <div className="header-wrapper justify-content-lg-end">
                     <Link href="/">
                         <div className="mobile-logo text-center d-lg-none mt-1">
-                            <img src="./assets/images/logo/logo-icon-blue.svg" width="50px" height="50px" />
+                            <img src="./assets/images/logo/logo-icon-white.svg" width="50px" height="50px" />
                         </div>
                     </Link>
                   <div className="menu-area">
@@ -91,7 +91,7 @@ export default function HeaderNav() {
                         }}
                       >
                         Connect Wallet
-                        <i className="icofont-wallet ms-2"></i>
+                        {/* <i className="icofont-wallet ms-2"></i> */}
                       </button>
                     )}
 

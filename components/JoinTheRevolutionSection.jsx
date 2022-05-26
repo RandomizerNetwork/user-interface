@@ -21,7 +21,7 @@ export default function JoinTheRevolutionSection() {
                             </div>
                             <div className="col-lg-6">
                                 <div className="cta-thumb text-end">
-                                    <img src="assets/images/metaspace/virtual-reality-2.png" alt="gamer-img" />
+                                    <img src="assets/images/metaspace/virtual-reality.png" alt="gamer-img" />
                                 </div>
                             </div>
                         </div>

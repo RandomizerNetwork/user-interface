@@ -285,7 +285,7 @@ function MyApp({ Component, pageProps }) {
       <>
         <Head>
           <meta charSet="utf-8"/>
-          <title>Randomizer Network Metaverse - Multi-chain Random Entropy Generator</title>
+          <title>Randomizer Network Metaverse - Multi-chain Deflationary Launchpad</title>
           <meta name="description" content="Randomizer Metaverse Network is a No-Code Trustless Random Entropy Generator that players, creators and influencers will use to create their own DAO Distributions." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" type="image/png" href="assets/images/favicon.png" />

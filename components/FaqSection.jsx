@@ -5,6 +5,7 @@ export default function FaqSection() {
         <div className="partner-section padding-top padding-bottom">
             <div className="container">
                 <div className="section-wrapper">
+                    <div className="newMainSection mt-5 fs-1 fw-bold">FAQ</div>
                     <div className="row g-4">
                         <div className="col-lg-6 col-12">
                             <div className="partner-list" id="accordionExample">

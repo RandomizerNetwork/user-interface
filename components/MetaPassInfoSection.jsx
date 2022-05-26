@@ -35,6 +35,9 @@ export default function MetaPassInfoSection() {
                   <li className="description bullet">Create custom trustless distributions</li>
                   <li className="description bullet">Earn from generated revenue fees</li>
                   <li className="description bullet">Future Random NFT Avatar </li>
+
+                {/* <span className="description"> - Private Members Club</span>
+                <span className="description mb-2"> - Space Flight Lottery</span> */}
                 </ul>  
               </div>
             </div>
