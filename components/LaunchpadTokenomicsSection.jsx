@@ -9,11 +9,11 @@ export default function LaunchpadTokenomicsSection() {
                     <div className="newMainSectionThreeColumn text-center">
                         <div className='section3 d-block'>
                             <div className='section2Column w-100'>
-                                <div className="title">NLL Burn</div>
+                                <div className="title">Daily Burn</div>
                                 <div className="desc">50%</div>
                             </div>
                             <div className='section2Column w-100'>
-                                <div className="title">NLL Rewards</div>
+                                <div className="title">Daily Draw</div>
                                 <div className="desc">10%</div>
                             </div>
                         </div>

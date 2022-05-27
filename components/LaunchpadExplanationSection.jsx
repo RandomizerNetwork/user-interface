@@ -16,7 +16,7 @@ export default function LaunchpadExplanationSection() {
                     <div className="newMainSectionThreeColumn text-center">
                         <h4 style={{ color: "#FFF" }}>How to participate</h4>
                         <ul>
-                            <li>The Meta Game Passes guarantees automatic participation in the Daily Draw Draw of RANDOM Governance Tokens and RNLL Utility Tokens.</li>
+                            <li>The Meta Game Passes guarantees automatic participation in the Daily Draw Draw of RANDOM Governance Tokens and RNDD Utility Tokens.</li>
                         </ul>
                     </div>
                     <div className="newMainSectionThreeColumn text-center">

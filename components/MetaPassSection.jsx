@@ -93,7 +93,7 @@ export default function MetaPassSection() {
 
                 
                 <div className="text-start m-3 fs-6" style={{letterSpacing:"1.4px"}}>The Randomizer Network is a novel deflationary Launchpad Protocol that is 
-                  backed by Chainlink Verifiable Random Function (VRF) and Chainlink Keepers and ensures that all the Meta Pass Holders automatically have a daily chance to win RANDOM Governance Tokens and RNLL Utility Tokens in the Deflationary Daily Draw!</div>
+                  backed by Chainlink Verifiable Random Function (VRF) and Chainlink Keepers and ensures that all the Meta Pass Holders automatically have a daily chance to win RANDOM Governance Tokens and RNDD Utility Tokens in the Deflationary Daily Draw!</div>
 
                   <hr className="metaline metalineCommon" />
                   <div className="text-center mb-1"> Price: 0.05 ETH / Max: 2 </div>

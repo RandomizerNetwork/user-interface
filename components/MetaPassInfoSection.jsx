@@ -28,14 +28,14 @@ export default function MetaPassInfoSection() {
               <hr className="metaline metalineCommon w-100" />
               <div className="bullets">
                 <ul className="d-flex flex-wrap align-content-center flex-column">
-                  <li className="description bullet">Propose/Vote in RANDOM Governance</li>
                   <li className="description bullet">Daily Participation</li>
+                  <li className="description bullet">Propose/Vote in RANDOM Governance</li>
                   <li className="description bullet">Create custom trustless distributions</li>
                   <li className="description bullet">Earn from generated revenue fees</li>
                   <li className="description bullet">Future Random NFT Avatar </li>
 
-                {/* <span className="description"> - Private Members Club</span>
-                <span className="description mb-2"> - Space Flight Lucky Draw</span> */}
+                  {/* <span className="description"> - Private Members Club</span>
+                  <span className="description mb-2"> - Space Flight Lucky Draw</span> */}
                 </ul>  
               </div>
             </div>
