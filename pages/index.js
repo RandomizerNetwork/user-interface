@@ -39,7 +39,7 @@ export default function Home() {
           <MetaPassInfoSection />
           <JoinTheRevolutionSection />
           <LaunchpadPoolsSection />
-          <LaunchpadSection />
+          {/* <LaunchpadSection /> */}
           <LaunchpadExplanationSection />
           <LaunchpadTokenomicsSection />
           <LaunchpadEmissionsSection />

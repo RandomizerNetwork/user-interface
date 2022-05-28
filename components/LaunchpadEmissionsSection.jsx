@@ -9,17 +9,25 @@ export default function LaunchpadEmissionsSection() {
               <div className="newMainSectionThreeColumn text-center">
                 <div className='section3 d-block'>
                   <div className='section2Column w-100'>
-                    <div className="title">Daily Burn</div>
+                    <div className="title">Burned RANDOM</div>
                     <div className="desc">10 Years</div>
                   </div>
                   <div className='section2Column w-100'>
-                    <div className="title">Daily Draw</div>
+                    <div className="title">Daily Draw RANDOM</div>
+                    <div className="desc">10 Years</div>
+                  </div>
+                  <div className='section2Column w-100'>
+                    <div className="title">Daily Draw META PASS</div>
                     <div className="desc">10 Years</div>
                   </div>
                 </div>
               </div>
               <div className="newMainSectionThreeColumn text-center">
                 <div className='section3 d-block'>
+                <div className='section2Column w-100'>
+                    <div className="title">Holder Rewards</div>
+                    <div className="desc">5 Years</div>
+                  </div>
                 <div className='section2Column w-100'>
                     <div className="title">DAO Treasury</div>
                     <div className="desc">5 Years</div>
@@ -38,6 +46,10 @@ export default function LaunchpadEmissionsSection() {
                   </div>
                   <div className='section2Column w-100'>
                     <div className="title">Yield Farming</div>
+                    <div className="desc">10 Years</div>
+                  </div>
+                  <div className='section2Column w-100'>
+                    <div className="title">Partners</div>
                     <div className="desc">10 Years</div>
                   </div>
                 </div>

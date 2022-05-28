@@ -9,9 +9,7 @@ export default function LaunchpadSection() {
           
           <div className="topSection">
 
-          <img className="randomizer-logo" src="./assets/images/logo/logo-icon-blue.svg" width="200px" height="200px" style={{ cursor: "pointer" }} />
-
-            {/* <h1 className="fw-normal yellow" style={{ fontWeight: "50px", margin: "0" }}>Randomizer Network</h1> */}
+            <img className="randomizer-logo" src="./assets/images/logo/logo-icon-blue.svg" width="200px" height="200px" style={{ cursor: "pointer" }} />
             <h1 className="primaryColor mb-4" style={{fontSize:"35px"}}>Multi-Chain Launchpad </h1>
             <h2 className="primaryColor mt-4" style={{fontSize:"25px"}}>High-quality projects on the blockchain</h2>
             <div className="row">
@@ -31,27 +29,9 @@ export default function LaunchpadSection() {
                   <span className="buyOnPancake text-white">Buy RANDOM</span>
                 </a>
               </div>
-
-              {/* <div className="col-12 col-sm-4 text-center mt-3">
-                <a href="https://www.youtube.com/embed/g5eQgEuiFC8" className="default-button reverse-effect">
-                  <span>
-                    <i className="icofont-telegram icofont-3x"></i>
-                    Telegram
-                  </span>
-                </a>
-              </div>
-              <div className="col-12 col-sm-4 text-start mt-3">
-                <a href="https://www.youtube.com/embed/g5eQgEuiFC8" className="default-button reverse-effect">
-                  <span>
-                    <i className="icofont-bullhorn"></i>
-                    Announcements
-                  </span>
-                </a>
-              </div> */}
-
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
