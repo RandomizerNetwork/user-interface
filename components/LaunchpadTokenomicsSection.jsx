@@ -14,22 +14,22 @@ export default function LaunchpadTokenomicsSection() {
                             </div>
                             <div className='section2Column w-100'>
                                 <div className="title">Daily Draw RANDOM</div>
-                                <div className="desc">5%</div>
+                                <div className="desc">2.5%</div>
                             </div>
                             <div className='section2Column w-100'>
                                 <div className="title">Daily Draw META PASS</div>
-                                <div className="desc">5%</div>
+                                <div className="desc">2.5%</div>
                             </div>
                         </div>
                     </div>
                     <div className="newMainSectionThreeColumn text-center">
                         <div className='section3 d-block'>
                             <div className='section2Column w-100'>
-                                <div className="title">RANDOM Treasury</div>
-                                <div className="desc">20%</div>
+                                <div className="title">RANDOM DAO Treasury</div>
+                                <div className="desc">25%</div>
                             </div>
                             <div className='section2Column w-100'>
-                                <div className="title">Holder Rewards</div>
+                                <div className="title">META PASS Holders</div>
                                 <div className="desc">5%</div>
                             </div>
                             <div className='section2Column w-100'>

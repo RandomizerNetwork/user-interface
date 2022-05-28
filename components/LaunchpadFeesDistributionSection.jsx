@@ -5,17 +5,19 @@ export default function LaunchpadFeesDistributionSection() {
     <section className="newSection" id="faq">
           <div className="newWrapper">
             <div className="newMainSection mt-5 fs-1 fw-bold">HOW IT WORKS</div>
-            <div className="newMainSectionText">The Randomizer Network has a base 2.5% base fee for future games</div>
+            <div className="newMainSectionText">The Randomizer Network Meta Pass has a 5% Royalty Fee</div>
             <div className="newMainSectionRow justify-content-center">
               <div className="newMainSectionColumn">
                 <div>Distribution of fees</div>
-                <ul>
-                  <li>- 50% goes to the Core Team for operational expenses</li>
-                  <li>- 10% is added to the pair RANDOM/USDC pair</li>
-                  <li>- 10% goes to Meta Pass Hodlers</li>
-                  <li>- 10% is burned after every game</li>
-                  <li>- 5% goes to the Staking System</li>
-                  <li>- 5% goes to Yield Farming</li>
+                <ul className='mb-0'>
+                  <li>- 30% goes to the Core Team for operational expenses</li>
+                  <li>- 10% is added to the Daily Draw game for burned</li>
+                  <li>- 10% is added to the pair RANDOM/DAI</li>
+                  <li>- 10% goes to the Daily Draw game</li>
+                  <li>- 10% goes to the Staking System</li>
+                  <li>- 10% goes to Meta Pass Holders</li>
+                  <li>- 10% goes to Yield Farming</li>
+                  <li>- 10% goes to Charity Treasury</li>
                 </ul>
               </div>
             </div>
